@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CYBER TETRIS | By Maezki</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         PANTALLA DE REGISTRO
+    ========================== -->
+
+    <div id="pantalla-registro" class="pantalla activa">
+
+        <div class="panel-registro">
+
+            <div class="linea-decorativa"></div>
+
+            <p class="texto-sistema">SYSTEM // ONLINE</p>
+
+            <h1>CYBER<span>TETRIS</span></h1>
+
+            <p class="subtitulo">
+                REGISTRO DE JUGADOR
+            </p>
+
+            <form id="formulario-registro">
+
+                <label for="tag">
+                    INGRESÁ TU TAG
+                </label>
+
+                <input
+                    type="text"
+                    id="tag"
+                    maxlength="12"
+                    autocomplete="off"
+                    placeholder="Tu Game Tag"
+                    required
+                >
+
+                <p id="error-tag" class="mensaje-error"></p>
+
+                <button type="submit" class="boton-cyber">
+                    INICIAR JUEGO
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PANTALLA DEL JUEGO
+    ========================== -->
+
+    <div id="pantalla-juego" class="pantalla">
+
+        <header class="cabecera-juego">
+
+            <div>
+                <p class="texto-sistema">PLAYER</p>
+                <h2 id="tag-jugador">---</h2>
+            </div>
+
+            <div class="marcador">
+
+                <div>
+                    <span>PUNTOS</span>
+                    <strong id="puntuacion">0</strong>
+                </div>
+
+                <div>
+                    <span>LÍNEAS</span>
+                    <strong id="lineas">0</strong>
+                </div>
+
+                <div>
+                    <span>NIVEL</span>
+                    <strong id="nivel">Sin Fin.</strong>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <main class="zona-juego">
+
+            <div class="tablero-container">
+
+                <div id="tablero"></div>
+
+                <div id="mensaje-game-over" class="game-over">
+
+                    <p>SYSTEM FAILURE</p>
+
+                    <h2>GAME OVER</h2>
+
+                    <span id="puntuacion-final">
+                        0 PUNTOS
+                    </span>
+
+                    <button id="boton-ranking" class="boton-cyber">
+                        VER RANKING
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <aside class="panel-derecho">
+
+                <div class="panel">
+
+                    <p class="titulo-panel">
+                        PRÓXIMA PIEZA
+                    </p>
+
+                    <div id="siguiente-pieza"></div>
+
+                </div>
+
+
+                <div class="panel controles-info">
+
+                    <p class="titulo-panel">
+                        CONTROLES
+                    </p>
+
+                    <p>← → &nbsp; MOVER</p>
+                    <p>↑ &nbsp;&nbsp;&nbsp; ROTAR/GIRAR</p>
+                    <p>↓ &nbsp;&nbsp;&nbsp; BAJAR</p>
+                    <p>SPACE &nbsp; CAÍDA</p>
+
+                </div>
+
+            </aside>
+
+        </main>
+
+
+        <!-- =========================
+             TOP GLOBAL
+        ========================== -->
+
+        <footer class="footer-global">
+
+            <div class="footer-titulo">
+                <p class="texto-sistema">
+                    DATABASE // GLOBAL
+                </p>
+
+                <h2>TOP <span>GLOBAL</span></h2>
+            </div>
+
+            <div id="top-global"></div>
+
+        </footer>
+
+
+        <!-- =========================
+             CONTROLES MÓVILES
+        ========================== -->
+
+        <div class="controles-moviles">
+
+            <button type="button" data-control="left">◀</button>
+
+            <button type="button" data-control="rotate">↻</button>
+
+            <button type="button" data-control="down">▼</button>
+
+            <button type="button" data-control="right">▶</button>
+
+            <button type="button" data-control="drop">⤓</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         PANTALLA DE RANKING
+    ========================== -->
+
+    <div id="pantalla-ranking" class="pantalla">
+
+        <div class="panel-ranking">
+
+            <p class="texto-sistema">
+                DATABASE // SCORES
+            </p>
+
+            <h1>TU <span>SCORE</span></h1>
+
+            <div class="linea-ranking"></div>
+
+            <div id="lista-ranking"></div>
+
+            <div class="acciones-ranking">
+
+                <button
+                    id="boton-nueva-partida"
+                    class="boton-cyber"
+                >
+                    NUEVA PARTIDA
+                </button>
+
+                <button
+                    id="boton-cambiar-jugador"
+                    class="boton-secundario"
+                >
+                    TOCAME SI TE GUSTA EL PITO
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
